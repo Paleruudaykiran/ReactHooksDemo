@@ -5,7 +5,7 @@ export default function App() {
   const initialState = () => {
     return {
       cnt: 0,
-      name: "Virat"
+      name: "Viratkohli"
     };
   };
   const handleChange = (op) => {
