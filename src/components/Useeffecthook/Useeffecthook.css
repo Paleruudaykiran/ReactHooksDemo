@@ -31,3 +31,6 @@
 .link:hover {
   color: black;
 }
+span {
+  color: rgba(115, 0, 111);
+}

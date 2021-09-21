@@ -32,7 +32,7 @@ function Useeffecthook() {
       <br />
       <h1>
         {" "}
-        x : {point.x} y : {point.y}
+        x : <span>{point.x}</span> y : <span>{point.y}</span>
       </h1>
       <a className="link" href="https://reactjs.org/docs/hooks-effect.html">
         documentation
