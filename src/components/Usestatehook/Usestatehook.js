@@ -1,10 +1,11 @@
 import React, { useState } from "react";
+import "./Usestatehook.css";
 function usestatehook() {
   // this approach is used when initialization is costly process
   const initialState = () => {
     return {
       cnt: 0,
-      name: "Viratkohli"
+      name: "Virat"
     };
   };
   const handleChange = (op) => {
@@ -24,20 +25,34 @@ function usestatehook() {
   handleToggle = () => {
     setObj((prevState) => {
       let s = prevState.name;
-      s = s == "virat" ? "rohit" : "virat";
+      s = s == "Virat" ? "Rohit" : "Virat";
       return { ...prevState, name: s };
     });
   };
   const [obj, setObj] = useState(() => initialState());
   return (
-    <div className="App">
-      <h2>Demonstration of useState hook by using object literal</h2>
+    <div className="main">
+      <h2 className="header">
+        Demonstration of useState hook by using object literal
+      </h2>
       <h1>Count : {obj.cnt} </h1>
-      <button onClick={() => handleChange("+")}>increment</button>
-      <button onClick={() => handleChange("-")}>decrement</button>
-      <button onClick={() => handleChange("*")}>reset</button>
+      <button className="btn" onClick={() => handleChange("+")}>
+        increment
+      </button>
+      <button className="btn" onClick={() => handleChange("-")}>
+        decrement
+      </button>
+      <button className="btn" onClick={() => handleChange("*")}>
+        reset
+      </button>
       <h1>{obj.name}</h1>
-      <button onClick={handleToggle}>Toggle</button>
+      <button className="btn" onClick={handleToggle}>
+        Toggle
+      </button>
+      <br />
+      <a className="link" href="https://reactjs.org/docs/hooks-state.html">
+        documentaion
+      </a>
     </div>
   );
 }
